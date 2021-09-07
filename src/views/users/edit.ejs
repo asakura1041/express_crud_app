@@ -1,0 +1,22 @@
+<div class="data-form">
+  <form class="form-signin" action="<%= `/users/${user._id}/update?_method=PUT` %>" method="post">
+    <h2 class="form-signin-heading">Edit User</h2>
+    <label for="inputFirstName">First Name</label>
+    <input type="text" name="firstName" id="inputFirstName" class="form-control" placeholder="First"
+      value="<%= user.firstName %>" autofocus>
+    <label for="inputLastName">Last Name</label>
+    <input type="text" name="lastName" id="inputLastName" value="<%= user.lastName %>" class="form-control"
+      placeholder="Last">
+    <label for="inputPassword">Password</label>
+    <input type="email" name="email" id="inputEmail" placeholder="Email" value="<%= user.email %>" class="form-control"
+      required>
+    <label for="inputAge">Age</label>
+    <input type="text" name="age" id="inputAge" value="<%= user.age %>" class="form-control" placeholder="Age" required>
+    <select name="sex" id="inputSex" class="form-control">
+      <option value="男">男</option>
+      <option value="女">女</option>
+    </select>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+  </form>
+</div>
